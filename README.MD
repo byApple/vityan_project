@@ -46,6 +46,7 @@ kubectl apply -f vityan.yaml
 
 # Test
 open https://dyablo-inc.ru/service1
+
 open https://dyablo-inc.ru/service2
 
 # Coming soon
