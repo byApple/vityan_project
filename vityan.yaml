@@ -15,8 +15,22 @@ spec:
       containers:
         - name: vityan-1
           image: byapple/vityan-app:v0.0.1
+          resources:
+            requests:
+              cpu: "0.3"
+              memory: "256Mi"
+            limits:
+              cpu: "0.5"
+              memory: "512Mi"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 10
       imagePullSecrets:
       - name: regcred
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -35,6 +49,19 @@ spec:
       containers:
         - name: vityan-1
           image: byapple/vityan-app:v0.0.2
+          resources:
+            requests:
+              cpu: "0.3"
+              memory: "256Mi"
+            limits:
+              cpu: "0.5"
+              memory: "512Mi"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 10
       imagePullSecrets:
       - name: regcred
 ---
@@ -78,13 +105,6 @@ spec:
   - host: dyablo-inc.ru
     http:
       paths:
-      - path: /test
-        pathType: Prefix
-        backend:
-          service:
-            name: demo
-            port:
-              number: 80
       - path: /service1
         pathType: Prefix
         backend:
