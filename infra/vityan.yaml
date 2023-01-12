@@ -67,16 +67,24 @@ kind: Ingress
 metadata:
   name: nginx-ingress
   namespace: default
-#  annotations:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 #    nginx.ingress.kubernetes.io/enable-cors: "true"
 #    # Указываем, каким образом выписывать сертификат
 #    cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
   ingressClassName: nginx
   rules:
-  - host: www.dyablo-inc.ru
+  - host: dyablo-inc.ru
     http:
       paths:
+      - path: /test
+        pathType: Prefix
+        backend:
+          service:
+            name: demo
+            port:
+              number: 80
       - path: /service1
         pathType: Prefix
         backend:
