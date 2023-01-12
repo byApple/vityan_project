@@ -19,7 +19,7 @@ kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.1
 ```bash
 kubectl apply -f letsencrypt.yaml
 ```
-:point_up: sometimes fails with connection error. Later can be fixed.
+:point_up: sometimes fails with connection error. Just wait and try again. Later can be fixed.
 **Configure ~/.docker/config.json to have access to private repo**
 
 Should be something like this:
