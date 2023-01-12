@@ -47,3 +47,9 @@ kubectl apply -f vityan.yaml
 # Test
 open https://dyablo-inc.ru/service1
 open https://dyablo-inc.ru/service2
+
+# Coming soon
+:chart_with_upwards_trend: Cluster monitoring (base level)
+:incoming_envelope: Helm chart installation (maybe)
+:toilet: More bugs (definitely)
+
