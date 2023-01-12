@@ -18,6 +18,7 @@ kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.1
 kubectl apply -f letsencrypt.yaml
 ```
 **Configure ~/.docker/config.json to have access to private repo**
+
 Should be something like this:
 ```yaml
 {
