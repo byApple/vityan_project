@@ -10,6 +10,7 @@ Vityan project is a demonstration platform, aimed to demonstrate Danechka's expe
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/cloud/deploy.yaml
 ```
 :point_up: at this moment you should manually link IP of new balancer to your DNS name. Later can be automated.
+
 **Install Cert manager**
 ```bash
 kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.1.0/cert-manager.yaml
