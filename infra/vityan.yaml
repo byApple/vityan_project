@@ -69,9 +69,9 @@ metadata:
   namespace: default
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-#    nginx.ingress.kubernetes.io/enable-cors: "true"
-#    # Указываем, каким образом выписывать сертификат
-#    cert-manager.io/cluster-issuer: "letsencrypt"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    # Указываем, каким образом выписывать сертификат
+    cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
   ingressClassName: nginx
   rules:
@@ -100,7 +100,7 @@ spec:
             port:
               number: 5000
   # Указываем настройки для tls — для какого хоста нужен tls и куда сохранить полученный сертификат
-#  tls:
-#  - hosts:
-#    - ingress.465f7.task24.rbr-kubernetes.com
-#    secretName: ingress-465f7-task24-rbr-kubernetes-com-cert
+  tls:
+  - hosts:
+    - dyablo-inc.ru
+    secretName: dyablo-inc-ru-cert
