@@ -1,7 +1,7 @@
 # Vityan project
 
 ## Overview
-Vityan project is a demonstration platform, aimed to perform Danechka's experience. It contains three kostil-type python apps, deployed into kuber.
+Vityan project is a demonstration platform, aimed to demonstrate Danechka's experience. It contains three kostil-type python apps, deployed into kuber.
 
 # Get started
 ## Installation guide
