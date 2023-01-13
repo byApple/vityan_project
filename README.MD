@@ -15,7 +15,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 ```bash
 kubectl get svc -n ingress-nginx
 ```
-Tell to Danechka *External IP* of loadbalancer
+Tell to Danechka *External IP* of loadbalancer and wait for his reply that DNS link is ready
 
 **Install Cert manager**
 ```bash
