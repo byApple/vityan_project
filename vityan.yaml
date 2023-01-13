@@ -105,14 +105,14 @@ spec:
   - host: dyablo-inc.ru
     http:
       paths:
-      - path: /service1
+      - path: /service1-v1.23
         pathType: Prefix
         backend:
           service:
             name: svc-internal-1
             port:
               number: 5000
-      - path: /service2
+      - path: /service2-v1.23
         pathType: Prefix
         backend:
           service:

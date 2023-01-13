@@ -11,6 +11,12 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 ```
 :point_up: at this moment you should manually link IP of new balancer to your DNS name. Later can be automated.
 
+**Special part for Vitya and his :poop: VK)))**
+```bash
+kubectl get svc -n ingress-nginx
+```
+Tell to Danechka *External IP* of loadbalancer
+
 **Install Cert manager**
 ```bash
 kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.1.0/cert-manager.yaml
